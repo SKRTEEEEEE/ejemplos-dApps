@@ -1,0 +1,23 @@
+/* Estilos futuristas con colores cyberpunk */
+li {
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    letter-spacing: 3px;
+    position: relative;
+  }
+  
+  li:hover {
+    color: #ffffff; /* Cambia el color al pasar el mouse a blanco */
+    text-shadow: 0 0 10px #ff00aa, 0 0 20px #ff00aa, 0 0 30px #ff00aa; /* Agrega un efecto de sombra */
+  }
+  
+
+  
+  
+  

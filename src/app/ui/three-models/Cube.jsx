@@ -18,7 +18,7 @@ export const Cube = () => {
           <PerspectiveCamera makeDefault position={[0, 0, 2]} />
           <color attach="background" args={['#ffb3ed']} />
           <Text ref={textRef} fontSize={1} color="#999">
-            Queen420
+          WEB3🔒🏴‍☠️
           </Text>
         </RenderTexture>
       </meshStandardMaterial>

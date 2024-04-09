@@ -1,5 +1,6 @@
 "use client"
 
+import Projects from './ui/root/Projects';
 import Who from './ui/root/Who';
 import styled from 'styled-components';
 
@@ -21,9 +22,8 @@ export default function Home() {
     <Container>
       
       <Who />
-      {/* <Works />
-      <Hero />
-      <Contact /> */}
+      <Projects />
+  
     </Container>
   );
 }
