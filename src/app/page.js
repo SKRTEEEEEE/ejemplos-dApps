@@ -1,6 +1,6 @@
 "use client"
 
-import Who from './ui/Who';
+import Who from './ui/root/Who';
 import styled from 'styled-components';
 
 const Container = styled.div`

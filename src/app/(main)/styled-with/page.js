@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Cuadrito from "../ui/main/cuadrito"
-import StyledComponentsTest from '../ui/main/StyledComponents';
+import Cuadrito from "../../ui/Navbar"
+import StyledComponentsTest from '../../ui/main/StyledComponents';
 
 export default function StyledWith() {
   return (

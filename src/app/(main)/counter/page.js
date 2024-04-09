@@ -1,7 +1,7 @@
 // import { Box } from '@chakra-ui/react';
 // import { Text } from '@chakra-ui/react';
-import Counter from '../ui/main/Counter';
-import Cuadrito from '../ui/main/cuadrito';
+import Counter from '../../ui/main/Counter';
+import Cuadrito from '../../ui/Navbar';
 
 export default function counterPage() {
   return (

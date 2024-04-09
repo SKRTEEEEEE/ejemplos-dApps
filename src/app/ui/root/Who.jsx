@@ -5,9 +5,9 @@ import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import React from 'react';
 import styled from 'styled-components';
-import { Cube } from './three-models/Cube';
-import Cuadrito from './main/cuadrito';
-// import Navbar from './Navbar';
+import { Cube } from '../three-models/Cube';
+import Navbar from '../Navbar';
+
 
 const Section = styled.div`
   height: 100vh;
@@ -80,8 +80,8 @@ const Button = styled.button`
 function Who() {
   return (
     <Section>
-      {/* <Navbar /> */}
-      <Cuadrito/>
+      <Navbar />
+
       <Container>
         <Left>
           <Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
