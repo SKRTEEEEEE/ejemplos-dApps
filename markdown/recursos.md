@@ -1,30 +1,22 @@
 # Recursos
 
-## Aprender sobre las tecnologias usadas
-
-### Recursos de Aprendizaje Recomendados
-
-- Tutoriales sobre la integración de [Chainlink](https://www.youtube.com/@chainlink) en contratos inteligentes.
-- Playground para probar las [funciones de Chainlink](https://functions.chain.link/playground).
-
 ## Tecnologías y Herramientas Utilizadas
 
-### Lenguajes de Programación
+### [Tecnologías y Lenguajes de Programación](https://github.com/SKRTEEEEEE/markdowns/blob/main/utils/techs-lenguajes.md)
+### [Herramientas de desarollo](https://github.com/SKRTEEEEEE/markdowns/blob/main/utils/development-tools.md)
+### [Herramientas de edición](https://github.com/SKRTEEEEEE/markdowns/blob/main/utils/edition-tools.md)
 
-- [Solidity](https://docs.soliditylang.org/en/v0.8.23/): Lenguaje utilizado para el desarrollo de contratos inteligentes.
-- [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript): Utilizado para la creación de interfaces de usuario y la interacción con los contratos desplegados.
+## Aprender
 
-### Herramientas externas
+### [Tecnologias Frontend](https://github.com/SKRTEEEEEE/markdowns/blob/main/utils/learn-techs/frontend.md)
+### [Tecnologias Backend](https://github.com/SKRTEEEEEE/markdowns/blob/main/utils/learn-techs/backend.md)
+### [Empezar con NextJS](https://github.com/SKRTEEEEEE/markdowns/blob/main/utils/how-start/nextjs.md)
 
-- [Remix IDE](https://remix.ethereum.org/): Entorno integrado de desarrollo utilizado para escribir, probar y desplegar contratos inteligentes.
-- [MetaMask](https://metamask.io/): Extensión de navegador utilizada para interactuar con aplicaciones descentralizadas (dApps) y cadenas de bloques.
-- [ThirdWeb](https://thirdweb.com/explore): Entorno integrado para el desarollo de aplicaciones web3.
 
-### Librerias y frameworks
+## Tips
 
-- [TailwindCss](https://tailwindcss.com/): Tailwind docs
-- [Chakra UI](https://chakra-ui.com/getting-started/nextjs-app-guide): Documentation de ChakraUI(integracion en NextJs)
+### [Shortcuts](https://github.com/SKRTEEEEEE/markdowns/blob/main/tips/shortcuts.md)
+### [Git](https://github.com/SKRTEEEEEE/markdowns/blob/main/tips/git.md)
+### [Markdown](https://github.com/SKRTEEEEEE/markdowns/blob/main/tips/markdown.md)
 
-#### [ThirWebDocs](https://portal.thirdweb.com/): Documentación de ThirdWeb.
 
-- [ThirdWebDefaultChains](https://portal.thirdweb.com/react/v4/ThirdwebProvider#default-chains): Cadenas que admite por defecto el Wrapper de ThirdWeb

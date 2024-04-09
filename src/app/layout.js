@@ -16,14 +16,15 @@ export default function RootLayout({ children }) {
   return (
     <ThirdWebProviderWrapper>
       <html lang="en">
-        
+
         <body className={inter.className}>
           {/* <Cuadrito /> 
         El ProviderWrapper aveces lanza un warning del rehidratacion de react, si lo pongo en page.js creo que no pasa
         Solo cuando refresco la url /counter
         Esta es la mejor combinación para usar varios Wrappers
         */}<StyledComponentsRegistry>
-          {children}</StyledComponentsRegistry>
+            {children}
+          </StyledComponentsRegistry>
         </body>
       </html>
     </ThirdWebProviderWrapper>

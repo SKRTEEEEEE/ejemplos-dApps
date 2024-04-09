@@ -13,10 +13,11 @@ Ejemplos de aplicaciones descentralizadas que se pueden personalizar posteriorme
 
 Aplicaciones desarrolladas principalmente con: 
 
-- NextJS para la parte principal, Frontend y Backend(Web).
-- TailwindCSS, StyledComponents y ThreeJS para la parte visual, Frontend(Web).
-- ThirdWeb para la conectividad web/blockchain y para el despliegue de Smart Contracts, Backend(Web) y Blockchain.
-- Solidity para la creación de smart contracts, Blockchain.
+- **NextJS v14** para la parte principal, _Frontend y Backend(Web)_.
+- **TailwindCSS, StyledComponents y ThreeJS** para la parte visual, _Frontend(Web)_.
+- **ThirdWeb SDK v4** para la conectividad web/blockchain, _Backend(Web)_.
+- **ThirdWeb CLI** para el despliegue de Smart Contracts, _Blockchain_.
+- **Solidity** para la creación de smart contracts, _Blockchain_.
 
 ## [Recursos](markdown/recursos.md)
 
