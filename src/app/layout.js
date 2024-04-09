@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 import ThirdWebProviderWrapper from './ui/ThirdWebProvider';
-import StyledComponentsRegistry from './lib/registry';
+import StyledComponentsRegistry from '../lib/registry';
 // import ProviderWrapper from './ui/ProviderWrapper';
 // import Cuadrito from './ui/main/cuadrito';
 
