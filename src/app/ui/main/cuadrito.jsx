@@ -9,6 +9,7 @@ function Cuadrito() {
         <div>
           Hola, esto es el navbar de un proyecto <Link href="/">web3</Link>
         </div>
+        <div><Link href="/styled-with">GO</Link></div>
         <ConnectWalletButton />
       </div>
     </div>

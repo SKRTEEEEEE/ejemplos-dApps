@@ -1,22 +1,29 @@
-import Link from 'next/link';
-import Cuadrito from './ui/main/cuadrito';
-import StyledComponentsTest from './ui/main/StyledComponents';
+"use client"
+
+import Who from './ui/Who';
+import styled from 'styled-components';
+
+const Container = styled.div`
+height: 100vh;
+scroll-snap-type: y mandatory;
+scroll-behavior: smooth;
+overflow-y: auto;
+scrollbar-width: none;
+color: white;
+background: url('./img/bg.jpeg');
+&::-webkit-scrollbar {
+  display: none;
+}
+`;
 
 export default function Home() {
   return (
-    <main className="h-screen ">
-      <Cuadrito className="h-1/6" />
-      <div className="flex flex-col justify-center items-center h-5/6 ">
-        Discover our blockchain number store{' '}
-        <Link
-          href="/counter"
-          className="px-8 border-slate-400 border-2 rounded-md mx-2"
-        >
-          {' '}
-          here
-        </Link>
-        <StyledComponentsTest/>
-      </div>
-    </main>
+    <Container>
+      
+      <Who />
+      {/* <Works />
+      <Hero />
+      <Contact /> */}
+    </Container>
   );
 }
