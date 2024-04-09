@@ -15,8 +15,8 @@ export default function CounterLayout({ children }) {
   return (
     <body>
       {/* <ChakraUIProvider>*/}
-      <main className="h-screen ">
-      <Navbar className="h-1/6" />
+      <main className="h-screen">
+      <Navbar className="h-1/6 z-10" />
       <div className="flex justify-center items-center h-5/6">
       {children}</div></main>{/* </ChakraUIProvider>*/}
     </body>
