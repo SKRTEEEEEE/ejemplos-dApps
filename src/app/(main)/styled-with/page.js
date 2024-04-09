@@ -1,12 +1,11 @@
 import Link from 'next/link';
-import Cuadrito from "../../ui/Navbar"
 import StyledComponentsTest from '../../ui/main/StyledComponents';
 
 export default function StyledWith() {
   return (
-    <main className="h-screen ">
-      <Cuadrito className="h-1/6" />
-      <div className="flex flex-col justify-center items-center h-5/6 ">
+
+     
+      <section className="flex flex-col justify-center items-center ">
         Discover our blockchain number store{' '}
         <Link
           href="/counter"
@@ -16,7 +15,7 @@ export default function StyledWith() {
           here
         </Link>
         <StyledComponentsTest/>
-      </div>
-    </main>
+      </section>
+
   );
 }

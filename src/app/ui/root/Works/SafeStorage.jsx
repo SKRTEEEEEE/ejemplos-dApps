@@ -4,10 +4,10 @@ import { OrbitControls } from '@react-three/drei';
 import styled from 'styled-components';
 
 import { Desktop } from '../../three-models/Desktop';
-// import { Link } from 'react-router-dom';
+import Link from "next/link"
 
 const Desc = styled.div`
-  width: 80%;
+  width: 100%;
   position: absolute;
   padding: 20px;
   background-color: white;
@@ -38,7 +38,8 @@ export const SafeStorage = () => {
         <directionalLight position={[7, 2, 1]} />
       </Canvas>
 
-        <Desc>Developing WEB3 Gen</Desc>
+      <Link href={"./counter"}>
+        <Desc>Ver dApp</Desc></Link>
   
     </>
   );
