@@ -2,7 +2,7 @@ import React from 'react';
 import ConnectWalletButton from './ConnectWallet';
 import Link from 'next/link';
 
-function Cuadrito() {
+function Navbar() {
   return (
     <div>
       <div className="color-change-2x p-1 px-4 flex items-center sm:gap-8 justify-between">
@@ -16,4 +16,4 @@ function Cuadrito() {
   );
 }
 
-export default Cuadrito;
+export default Navbar;
