@@ -1,6 +1,6 @@
 // import ProviderWrapper from '../ui/ProviderWrapper.jsx';
 
-import { ChakraUIProvider } from '../ui/ChakraUIProvider';
+// import { ChakraUIProvider } from '../ui/ChakraUIProvider';
 
 // import ProviderWrapper from '../ui/ProviderWrapper';
 
@@ -12,7 +12,7 @@ export const metadata = {
 export default function CounterLayout({ children }) {
   return (
     <body>
-      <ChakraUIProvider>{children}</ChakraUIProvider>
+      {/* <ChakraUIProvider></ChakraUIProvider> */}{children}
     </body>
   );
 }

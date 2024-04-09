@@ -27,3 +27,9 @@ Pruebas de frontend, integracion con blockchain, bdd...
 ### Contribuciones y Problemas
 
 Si encuentras problemas o deseas contribuir al proyecto, por favor, crea un issue en el repositorio.
+#### Not installed dependencies.
+
+    "@chakra-ui/next-js": "^2.2.0",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
