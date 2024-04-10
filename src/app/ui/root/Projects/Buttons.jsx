@@ -31,12 +31,21 @@ const ButtonContainer = styled.div`
 
 const Button = styled.button`
 width: 12vw;
-background-color: white;
+background-color: rgba(255, 255, 255, 0.2);
 color: lightskyblue;
 font-size: 24px;
 font-weight: 30px;
 padding: 20px;
 border-radius: 10px;
+@media only screen and (max-width: 768px) {
+  width: 25vw;
+  font-size: 12px;
+}
+&:hover {
+  border: 2px solid lightskyblue;
+  text-shadow: 0 0 10px #ff00aa, 0 0 20px #ff00aa, 0 0 30px #ff00aa;
+
+}
 `;
 
 
@@ -44,7 +53,6 @@ border-radius: 10px;
 
 
 export const Buttons = ( {urlDApp, urlInfo, urlContrato} )=> {
-    console.log(urlDApp);
      return (
         <Desc>
       <ButtonContainer>

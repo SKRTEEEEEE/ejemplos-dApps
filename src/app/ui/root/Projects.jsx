@@ -28,10 +28,7 @@ const Left = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media only screen and (max-width: 768px) {
-    padding: 20px;
-    justify-content: center;
-  }
+ 
 `;
 const Right = styled.div`
   flex: 3;
@@ -43,7 +40,12 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media only screen and (max-width: 768px) {
+    gap: 0px;
+  }
 `;
+
+
 
 
 const data = [ 
@@ -56,6 +58,7 @@ const data = [
 
 function Projects() {
   const [work, setWork] = useState('NFT MemberShip');
+
   return (
     <Section id='projects'>
       <Container>
@@ -63,10 +66,11 @@ function Projects() {
           <List>
             {data.map((item) => (
               <li
-                onClick={() => setWork(item)}
+                onClick={() => {setWork(item)}}
                 translate="no"
                 text={item}
                 key={item}
+                
               >
                 {item}
               </li>
@@ -74,19 +78,7 @@ function Projects() {
           </List>
         </Left>
         <Right>
-          {/* {work === 'Safe Storage' ? (
-           <ProjectsSelector work={work}/>
-          ) : work === 'NFT MemberShip' ? (
-            <ProjectsSelector work={work}/>
-          ) : work === 'Lottery' ? (
-            <ProjectsSelector work={work}/>
-          ) : work === 'Marketing 3.0' ? (
-            <ProjectsSelector work={work}/>
-          ) : work === "Other" ? (
-            <ProjectsSelector work={work}/>
-          ): <p>Error</p>} */}
           <ProjectsSelector work={work}/>
-          
         </Right>
       </Container>
     </Section>

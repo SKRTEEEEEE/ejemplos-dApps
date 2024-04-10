@@ -1,6 +1,8 @@
 {
-  "name": "frontpruebas",
+  "name": "ejemplos-dapps",
   "version": "0.1.0",
+  "description": "Ejemplos de dApps",
+  "author": {"email": "adanreh.m@gmail.com", "name": "Adan Reh", "url": "http://skrt-profile.vercel.app"},
   "private": true,
   "scripts": {
     "dev": "next dev",
