@@ -17,7 +17,7 @@ export const ProjectsSelector = ({work})=> {
           ) : work === 'NFT MemberShip' ? (
             <>
             <MemberShip />
-            <Buttons urlDApp="/counter" urlInfo="/#" urlContrato="/#"/>
+            <Buttons urlDApp="/nft-membership" urlInfo="/#" urlContrato="/#"/>
             </>
           ) : work === 'Lottery' ? (
             <>
