@@ -1,11 +1,11 @@
 "use client"
 
 import styled from 'styled-components';
-import { SafeStorage } from './Works/SafeStorage';
-import { Other } from './Works/Other';
-import { Lottery } from './Works/Lottery';
-import { Marketing } from './Works/Marketing';
-import { MemberShip } from './Works/MemberShip';
+import { SafeStorage } from './Projects/SafeStorage';
+import { Other } from './Projects/Other';
+import { Lottery } from './Projects/Lottery';
+import { Marketing } from './Projects/Marketing';
+import { MemberShip } from './Projects/MemberShip';
 import { useState } from 'react';
 import "./projects-list.css"
 
