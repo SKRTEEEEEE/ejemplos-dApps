@@ -6,17 +6,18 @@ import Link from "next/link"
 import styled from 'styled-components';
 
 const Desc = styled.div`
-  width: 80%;
+  width: 100%;
   position: absolute;
   padding: 20px;
-  background-color: white;
+  background-color: none;
   border-radius: 10px;
   color: lightskyblue;
   top: 70vh;
   font-size: 24px;
   font-weight: 30px;
   text-align: center;
-  justify-content: center;
+  justify-content: justify-center;
+  
 
   @media only screen and (max-width: 768px) {
     top: 0;
@@ -27,6 +28,20 @@ const Desc = styled.div`
   }
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Button = styled.button`
+width: 12vw;
+background-color: white;
+color: lightskyblue;
+font-size: 24px;
+font-weight: 30px;
+padding: 20px;
+border-radius: 10px;
+`;
 export const Lottery = () => {
   return (
     <>
@@ -36,8 +51,12 @@ export const Lottery = () => {
         <ambientLight intensity={5} />
         <directionalLight position={[7, 2, 1]} />
       </Canvas>
-      <Link href={"./nft-raffle"}>
-        <Desc>Ver dApp</Desc></Link>
+      <Desc>
+      <ButtonContainer>
+          <Link href={"./nft-raffle"}><Button>dApp</Button></Link>
+          <Link href={"#"}><Button>Info</Button></Link>
+          <Link href={"#"}><Button>Contrato</Button></Link></ButtonContainer>
+        </Desc>
     </>
   );
 };

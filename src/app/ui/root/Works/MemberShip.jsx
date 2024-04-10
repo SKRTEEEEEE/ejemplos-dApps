@@ -5,17 +5,18 @@ import { Laptop } from '../../three-models/Laptop';
 import Link from "next/link"
 
 const Desc = styled.div`
-  width: 80%;
+  width: 100%;
   position: absolute;
   padding: 20px;
-  background-color: white;
+  background-color: none;
   border-radius: 10px;
   color: lightskyblue;
   top: 70vh;
   font-size: 24px;
   font-weight: 30px;
   text-align: center;
-  justify-content: center;
+  justify-content: justify-center;
+  
 
   @media only screen and (max-width: 768px) {
     top: 0;
@@ -24,6 +25,21 @@ const Desc = styled.div`
     right: 0;
     margin: auto;
   }
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Button = styled.button`
+width: 12vw;
+background-color: white;
+color: lightskyblue;
+font-size: 24px;
+font-weight: 30px;
+padding: 20px;
+border-radius: 10px;
 `;
 
 export const MemberShip = () => {
@@ -35,8 +51,12 @@ export const MemberShip = () => {
         <ambientLight intensity={5} />
         <directionalLight position={[3, 2, 1]} />
       </Canvas>
-       <Link href={"./nft-membership"}>
-        <Desc>Ver dApp</Desc></Link>
+      <Desc>
+      <ButtonContainer>
+          <Link href={"./nft-membership"}><Button>dApp</Button></Link>
+          <Link href={"#"}><Button>Info</Button></Link>
+          <Link href={"#"}><Button>Contrato</Button></Link></ButtonContainer>
+        </Desc>
       
     </>
   );
