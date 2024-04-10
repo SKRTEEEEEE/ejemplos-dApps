@@ -1,13 +1,9 @@
 "use client"
 
 import styled from 'styled-components';
-import { SafeStorage } from './Projects/SafeStorage';
-import { Other } from './Projects/Other';
-import { Lottery } from './Projects/Lottery';
-import { Marketing } from './Projects/Marketing';
-import { MemberShip } from './Projects/MemberShip';
 import { useState } from 'react';
 import "./projects-list.css"
+import { ProjectsSelector } from './Projects/ProjectsSelector';
 
 
 const Section = styled.div`
@@ -78,17 +74,19 @@ function Projects() {
           </List>
         </Left>
         <Right>
-          {work === 'Safe Storage' ? (
-            <SafeStorage />
+          {/* {work === 'Safe Storage' ? (
+           <ProjectsSelector work={work}/>
           ) : work === 'NFT MemberShip' ? (
-            <MemberShip />
+            <ProjectsSelector work={work}/>
           ) : work === 'Lottery' ? (
-            <Lottery />
+            <ProjectsSelector work={work}/>
           ) : work === 'Marketing 3.0' ? (
-            <Marketing />
-          ) : (
-            <Other />
-          )}
+            <ProjectsSelector work={work}/>
+          ) : work === "Other" ? (
+            <ProjectsSelector work={work}/>
+          ): <p>Error</p>} */}
+          <ProjectsSelector work={work}/>
+          
         </Right>
       </Container>
     </Section>
