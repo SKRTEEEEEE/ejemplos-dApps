@@ -1,9 +1,8 @@
 import { OrbitControls } from '@react-three/drei';
 import React from 'react';
-
 import { Canvas } from '@react-three/fiber';
 import { CyberOrb } from '../../three-models/CyberOrb';
-
+import Link from "next/link"
 import styled from 'styled-components';
 
 const Desc = styled.div`
@@ -37,7 +36,8 @@ export const Lottery = () => {
         <ambientLight intensity={5} />
         <directionalLight position={[7, 2, 1]} />
       </Canvas>
-      <Desc>Creative Evolution</Desc>
+      <Link href={"./nft-raffle"}>
+        <Desc>Ver dApp</Desc></Link>
     </>
   );
 };

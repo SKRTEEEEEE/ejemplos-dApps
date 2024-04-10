@@ -12,14 +12,14 @@ export default function CurrentEntries() {
   );
 
   return (
-    <Container py={8}>
+    <div className='py-4'>
       {!entriesLoading ? (
         entries.map((entry, index) => (
-          <EntryCard key={index} walletAddress={entry} />
+          <EntryCard mx={4} key={index} walletAddress={entry} />
         ))
       ) : (
         <Spinner />
       )}
-    </Container>
+    </div>
   );
 }

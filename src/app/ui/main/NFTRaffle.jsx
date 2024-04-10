@@ -30,15 +30,6 @@ const FlexContainer = styled.div`
   padding: 5%;
 `;
 
-const InnerFlex = styled.div`
-  display: flex;
-`;
-
-const StyledButton = styled.button`
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-`;
 
 export default function NFTRaffle() {
   const address = useAddress();
@@ -83,14 +74,13 @@ export default function NFTRaffle() {
       <FlexContainer>
         <div>
           <div>
-            <p>Raffle app</p>
+            <h1>Raffle app</h1>
             <p style={{ fontWeight: 'bold', fontSize: '4xl' }}>
               Buy a ticket to win the NFT Prize
             </p>
           </div>
           <p>
-            Buy entries for a chance to win the NFT! Winner will receive a
-            price of 1 ETHSepolia :D.
+            Buy entries for a chance to win the NFT! This NFT will give you access to our exclusive membership page.
           </p>
           <RaffleStatus status={raffleStatus} />
           {!isLoadingEntryCost && (
@@ -99,20 +89,17 @@ export default function NFTRaffle() {
             </p>
           )}
           {address ? (
-            <InnerFlex>
-              <div style={{ marginRight: '20px' }}>
-                <StyledButton onClick={decreaseTicketAmount}>-</StyledButton>
+            <section className='flex justify-evenly'>
+              <div className='flex gap-2'>
+
+                <button className='w-12 p-2 bg-secondary/20 text-center border-2 rounded-md border-secondary' onClick={decreaseTicketAmount}>-</button>
                 <input
+                  className='w-12 p-2 text-center border-2 rounded-md border-secondary'
                   value={entryAmount}
-                  type="number"
+                  type={'number'}
                   onChange={(e) => setEntryAmount(parseInt(e.target.value))}
-                  style={{
-                    width: '14px',
-                    borderRadius: '4px',
-                    border: '4px solid rgba(0, 0, 0, 0.6)',
-                  }}
                 />
-                <StyledButton onClick={increaseTicketAmount}>+</StyledButton>
+                <button className='w-12 p-2 bg-secondary/20 text-center border-2 rounded-md border-secondary' onClick={increaseTicketAmount}>+</button>
               </div>
               <Web3Button
                 contractAddress={RAFFLE_CONTRACT_ADDRESS}
@@ -126,7 +113,7 @@ export default function NFTRaffle() {
                 Buy Ticket(s)
               </Web3Button>
               {!totalEntriesLoading && <p>Total Entries: {totalEntries.toString()}</p>}
-            </InnerFlex>
+            </section>
           ) : (
             <p>Connect your wallet to buy entries!</p>
           )}
