@@ -1,9 +1,9 @@
 'use client';
 
 import { HERO_IMAGE_URL, RAFFLE_CONTRACT_ADDRESS } from '@/const/addresses';
-import CurrentEntries from '@/app/ui/main/ruffle/CurrentEntries';
-import PrizeNFT from '@/app/ui/main/ruffle/PrizeNFT';
-import RaffleStatus from '@/app/ui/main/ruffle/RaffleStatus';
+import CurrentEntries from '@/app/ui/main/raffle/CurrentEntries';
+import PrizeNFT from '@/app/ui/main/raffle/PrizeNFT';
+import RaffleStatus from '@/app/ui/main/raffle/RaffleStatus';
 import {
   MediaRenderer,
   Web3Button,
