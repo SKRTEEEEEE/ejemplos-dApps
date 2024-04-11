@@ -17,13 +17,13 @@ import styled from 'styled-components';
 
 const Container = styled.section`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   min-height: 40vh;
-  margin-top: 30vh;
   @media screen and (max-width: 500px) {
     display: flex;
     flex-direction: column;
+    margin-top: 40vh;
   }
 `;
 
@@ -68,27 +68,34 @@ export default function NFTRaffle() {
   }
   return (
     <Container style={{ zIndex: 0 }}>
-      
+      <FlexContainer>
+        {raffleStatus ? (
+          <PrizeNFT />
+        ) : (
+          <MediaRenderer src={HERO_IMAGE_URL} width="90%" height="90%" />
+        )}
+      </FlexContainer>  
+
       <FlexContainer>
         <div>
           <div>
-            <h1 className='text-secondary font-bold lg:text-4xl text-xl'>Raffle app</h1>
+            <h1 className='text-secondary font-bold lg:text-4xl text-xl'>dApp Sorteo</h1>
             <p style={{ fontWeight: 'bold', fontSize: '4xl' }}>
-              Buy a ticket to win the NFT Prize
+              Compra un boleto para ganar un NFT de membresía anual.
             </p>
           </div>
           <p>
-            Buy entries for a chance to win the NFT! This NFT will give you access to our exclusive membership page.
+            Compra boletos para tener una oportunidad de ganar un NFT! Este NFT te da acceso a nuestras paginas exclusivas de membresía. Disfruta!
           </p>
           <RaffleStatus status={raffleStatus} />
           {!isLoadingEntryCost && (
             <p style={{ fontWeight: 'bold', fontSize: '2xl' }}>
-              Cost Per Entry: {entryCostInEther} SEPOLIA
+              Precio por boleto: {entryCostInEther} SEPOLIA
             </p>
           )}
           {address ? (
-            <section className='flex justify-evenly'>
-              <div className='flex gap-2'>
+            <section className='flex sm:flex-row flex-col justify-evenly'>
+              <div className='flex  gap-2'>
 
                 <button className='w-12 p-2 bg-secondary/20 text-center border-2 rounded-md border-secondary' onClick={decreaseTicketAmount}>-</button>
                 <input
@@ -108,26 +115,18 @@ export default function NFTRaffle() {
                 }
                 isDisabled={!raffleStatus}
               >
-                Buy Ticket(s)
+                Comprar ticket(s)
               </Web3Button>
-              {!totalEntriesLoading && <p>Total Entries: {totalEntries.toString()}</p>}
+              {!totalEntriesLoading && <p>Participaciones totales: {totalEntries.toString()}</p>}
             </section>
           ) : (
-            <p>Connect your wallet to buy entries!</p>
+            <p>Conecta tu billetera para participar!</p>
           )}
         </div>
       </FlexContainer>
 
-      <FlexContainer>
-        {raffleStatus ? (
-          <PrizeNFT />
-        ) : (
-          <MediaRenderer src={HERO_IMAGE_URL} width="90%" height="90%" />
-        )}
-      </FlexContainer>    
-
       <FlexContainer style={{ textAlign: 'center' }}>
-        <p style={{ fontSize: 'xl' }}>Current Raffle Entries:</p>
+        <p style={{ fontSize: 'xl' }}>Participaciones del sorteo actual:</p>
         <CurrentEntries />
       </FlexContainer>
     </Container>

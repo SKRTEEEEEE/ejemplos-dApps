@@ -13,9 +13,9 @@ export default function OwnedNFTs() {
 
   return (
     <section className='lg:block flex flex-col'>
-      <h1 className='text-secondary text-3xl mb-4'>Your Membership NFTs</h1>
+      <h1 className='text-secondary text-3xl mb-4'>Tu NFT de membresía </h1>
       {error && <p>Error: {error.message}</p>}
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <p>Cargando...</p>}
       {/* {data.length === 0 && <p>No Membership NFT yet</p>} */}
       {data && data.length === 0 && <BuyMemberNFT />}
       {data &&
@@ -24,10 +24,10 @@ export default function OwnedNFTs() {
             <div>
               {/* <p>Owner: {nft.owner}</p> */}
               <p>Metadata: {nft.metadata.name}</p>
-              <p>Description: {nft.metadata.description}</p>
+              <p>Descripción: {nft.metadata.description}</p>
               {/* <p>Quantity Owned: {nft.quantityOwned}</p> */}
-              <p>Supply: {nft.supply}</p>
-              <p>Type: {nft.type}</p>
+              <p>Cantidad circulante: {nft.supply}</p>
+              <p>Tipo de contrato: {nft.type}</p>
             </div>
             <div className='w-1/2'>
               <Image

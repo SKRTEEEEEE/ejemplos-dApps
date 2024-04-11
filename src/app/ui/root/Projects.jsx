@@ -7,7 +7,7 @@ import { ProjectsSelector } from './Projects/ProjectsSelector';
 import { dataProjects } from '@/const/const';
 
 
-const Section = styled.div`
+const Section = styled.section`
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
@@ -45,11 +45,6 @@ const List = styled.ul`
     gap: 0px;
   }
 `;
-
-
-
-
-
 
 function Projects() {
   const [work, setWork] = useState('NFT MemberShip');

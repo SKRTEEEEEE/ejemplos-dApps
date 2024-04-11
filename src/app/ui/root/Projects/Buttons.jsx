@@ -63,8 +63,8 @@ const Desc = styled.div`
   justify-content: center;
 
   @media only screen and (max-width: 768px) {
+    font-size: 15px;
     top: 0;
-    /* bottom: 0; */
     left: 0;
     right: 0;
     margin: auto;
@@ -82,7 +82,7 @@ export const Buttons = ({ id }) => {
           <ButtonPopUpInfo id={id}>Info {project.title}</ButtonPopUpInfo>
           <Link href={project.contractUrl}><Button>Contrato {project.title}</Button></Link>
         </ButtonContainer> </Main> :
-        <Desc>We Are Growing Other Projects, Discover Here</Desc>
+        <Desc>Construyendo otras dApps, Descubrirlas Aquí</Desc>
       }</>
 
   )
