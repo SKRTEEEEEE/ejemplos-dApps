@@ -12,30 +12,35 @@ export default function OwnedNFTs() {
   const { data, isLoading, error } = useOwnedNFTs(contract, address);
 
   return (
-    <section>
-      <h1>My Membership NFTs</h1>
+    <section className='lg:block flex flex-col'>
+      <h1 className='text-secondary text-3xl mb-4'>Your Membership NFTs</h1>
       {error && <p>Error: {error.message}</p>}
       {isLoading && <p>Loading...</p>}
       {/* {data.length === 0 && <p>No Membership NFT yet</p>} */}
       {data && data.length === 0 && <BuyMemberNFT />}
       {data &&
         data.map((nft, index) => (
-          <div className="flex items-center" key={index}>
+          <div className="flex flex-col lg:flex-row gap-4 items-center justify-evenly" key={index}>
             <div>
-              <p>Owner: {nft.owner}</p>
+              {/* <p>Owner: {nft.owner}</p> */}
               <p>Metadata: {nft.metadata.name}</p>
               <p>Description: {nft.metadata.description}</p>
-              <p>Quantity Owned: {nft.quantityOwned}</p>
+              {/* <p>Quantity Owned: {nft.quantityOwned}</p> */}
               <p>Supply: {nft.supply}</p>
               <p>Type: {nft.type}</p>
             </div>
-            <Image
-              className=" rounded-md"
-              src={nft.metadata.image}
-              alt={nft.metadata.name}
-              width={'500'}
-              height={'200'}
-            />
+            <div className='w-1/2'>
+              <Image
+                className=" rounded-md"
+                src={nft.metadata.image}
+                alt={nft.metadata.name}
+                style={{
+
+                  height: 'auto',
+                }}
+                width={500}
+                height={300}
+              /></div>
             {/* Aquí puedes mostrar más propiedades según tus necesidades */}
           </div>
         ))}

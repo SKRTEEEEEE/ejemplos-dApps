@@ -21,6 +21,10 @@ const Container = styled.section`
   gap: 10px;
   min-height: 40vh;
   margin-top: 30vh;
+  @media screen and (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const FlexContainer = styled.div`
@@ -64,17 +68,11 @@ export default function NFTRaffle() {
   }
   return (
     <Container style={{ zIndex: 0 }}>
-      <FlexContainer>
-        {raffleStatus ? (
-          <PrizeNFT />
-        ) : (
-          <MediaRenderer src={HERO_IMAGE_URL} width="90%" height="90%" />
-        )}
-      </FlexContainer>
+      
       <FlexContainer>
         <div>
           <div>
-            <h1>Raffle app</h1>
+            <h1 className='text-secondary font-bold lg:text-4xl text-xl'>Raffle app</h1>
             <p style={{ fontWeight: 'bold', fontSize: '4xl' }}>
               Buy a ticket to win the NFT Prize
             </p>
@@ -119,6 +117,15 @@ export default function NFTRaffle() {
           )}
         </div>
       </FlexContainer>
+
+      <FlexContainer>
+        {raffleStatus ? (
+          <PrizeNFT />
+        ) : (
+          <MediaRenderer src={HERO_IMAGE_URL} width="90%" height="90%" />
+        )}
+      </FlexContainer>    
+
       <FlexContainer style={{ textAlign: 'center' }}>
         <p style={{ fontSize: 'xl' }}>Current Raffle Entries:</p>
         <CurrentEntries />
