@@ -1,7 +1,9 @@
 import Link from "next/link"
 import styled from 'styled-components';
+import ButtonPopUpInfo from "./ButtonPopUpInfo";
+import { dataProjects } from "@/const/const";
 
-const Desc = styled.div`
+const Main = styled.div`
   width: 100%;
   position: absolute;
   padding: 20px;
@@ -17,7 +19,6 @@ const Desc = styled.div`
 
   @media only screen and (max-width: 768px) {
     top: 0;
-    /* bottom: 0; */
     left: 0;
     right: 0;
     margin: auto;
@@ -30,7 +31,7 @@ const ButtonContainer = styled.div`
 `;
 
 const Button = styled.button`
-width: 12vw;
+width: 20vw;
 background-color: rgba(255, 255, 255, 0.2);
 color: lightskyblue;
 font-size: 24px;
@@ -48,17 +49,41 @@ border-radius: 10px;
 }
 `;
 
+const Desc = styled.div`
+  width: 80%;
+  position: absolute;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  color: lightskyblue;
+  top: 70vh;
+  font-size: 24px;
+  font-weight: 30px;
+  text-align: center;
+  justify-content: center;
 
+  @media only screen and (max-width: 768px) {
+    top: 0;
+    /* bottom: 0; */
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+`;
 
+export const Buttons = ({ id }) => {
+  const project = dataProjects.find(project => project.id === id);
 
+  return (
+    <>
+      {project.active ?
+        <Main><ButtonContainer>
+          <Link href={project.path}><Button>dApp {project.title}</Button></Link>
+          <ButtonPopUpInfo id={id}>Info {project.title}</ButtonPopUpInfo>
+          <Link href={project.contractUrl}><Button>Contrato {project.title}</Button></Link>
+        </ButtonContainer> </Main> :
+        <Desc>We Are Growing Other Projects, Discover Here</Desc>
+      }</>
 
-export const Buttons = ( {urlDApp, urlInfo, urlContrato} )=> {
-     return (
-        <Desc>
-      <ButtonContainer>
-          <Link href={urlDApp}><Button>dApp</Button></Link>
-          <Link href={urlInfo}><Button>Info</Button></Link>
-          <Link href={urlContrato}><Button>Contrato</Button></Link></ButtonContainer>
-        </Desc>
-     )
+  )
 }

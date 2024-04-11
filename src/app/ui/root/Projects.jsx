@@ -2,8 +2,9 @@
 
 import styled from 'styled-components';
 import { useState } from 'react';
-import "./projects-list.css"
+import styles from "./projects-list.module.css"
 import { ProjectsSelector } from './Projects/ProjectsSelector';
+import { dataProjects } from '@/const/const';
 
 
 const Section = styled.div`
@@ -48,13 +49,7 @@ const List = styled.ul`
 
 
 
-const data = [ 
-    'Safe Storage',
-  'NFT MemberShip',
-  'Lottery',
-//   'Marketing 3.0',
-  'Other',
-];
+
 
 function Projects() {
   const [work, setWork] = useState('NFT MemberShip');
@@ -64,15 +59,16 @@ function Projects() {
       <Container>
         <Left>
           <List>
-            {data.map((item) => (
+            {dataProjects.map((item) => (
               <li
-                onClick={() => {setWork(item)}}
+                onClick={() => {setWork(item.name)}}
                 translate="no"
-                text={item}
-                key={item}
+                text={item.name}
+                key={item.name}
+                className={styles.projectList}
                 
               >
-                {item}
+                {item.name}
               </li>
             ))}
           </List>
