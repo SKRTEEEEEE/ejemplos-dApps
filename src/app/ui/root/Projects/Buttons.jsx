@@ -82,7 +82,7 @@ export const Buttons = ({ id }) => {
           <ButtonPopUpInfo id={id}>Info {project.title}</ButtonPopUpInfo>
           <Link href={project.contractUrl} target="_blank"><Button>Contrato {project.title}</Button></Link>
         </ButtonContainer> </Main> :
-        <Desc>Construyendo otras dApps, Descubrirlas Aquí</Desc>
+        <Link href="/other"><Desc>Construyendo otras dApps, Descubrirlas Aquí</Desc></Link>
       }</>
 
   )
