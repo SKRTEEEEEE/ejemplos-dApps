@@ -1,34 +1,12 @@
 "use client"
 
+import { dataProjects } from "@/const/const";
 import { useState } from "react";
-
-// import { useState } from 'react'
-
-// export default function ButtonPopUpInfo() {
-//   const [showPopup, setShowPopup] = useState(false)
-
-//   return (
-//     <>
-//       <button onClick={() => setShowPopup(true)}>
-//         Click me
-//       </button>
-
-//       {showPopup && <Popup onClose={() => setShowPopup(false)} />}
-//     </>
-//   )
-// }
-
-// function Popup({ onClose }) {
-//   return (
-//     <div className="popup">
-//       <div>Popup content here</div>
-//       <button onClick={onClose}>Close</button> 
-//     </div>
-//   )
-// }
+import style from "./ButtonPop.module.css"
 
 
 const Popup = ({ id, onClose }) => {
+  const data = dataProjects.find((item) => item.id === id)
     return (
       <div
         style={{
@@ -45,25 +23,28 @@ const Popup = ({ id, onClose }) => {
         }}
         onClick={onClose}
       >
-        <div style={{
-            display: 'flex',
-            height: "80%",
-            width: "80%",
-            background: "white",
-            borderRadius: "10px",
-            padding: "20px",
-            flexDirection: "column",
-            
-        }} className="">
-            <ul style={{
-                height: "40vw",
-                
-            }}>
-                <li>id: {id}</li>
-                <li></li>
-                <li></li>
-                <li></li>
+        <div  className={style.main}>
+            <section className={style.first}>
+              <h2 className="text-secondary md:text-5xl text-4xl font-bold my-2">{data?.title}</h2>
+              <p>{data?.description}</p>
+              <h3 className="text-secondary text-2xl font-bold my-2">Casos de uso</h3>
+              <ul className={style.second}>
+                {data?.usos?.map((uso, index) => (
+    <li className="my-2" key={index}>{uso}</li>
+  ))}
             </ul>
+            </section>
+            <section className={style.second}>
+              <h3 className="text-secondary text-2xl font-bold">Instrucciones de uso</h3>
+              <p className="my-2 text-xs"><i>Para aprender a interactuar con la blockchain ves a la sección: Aprender sobre blockchain</i></p>
+              <ul className={style.instrucciones}>
+                {data?.instrucciones?.map((instruccion, index) => (
+    <li className="text-xs md:text-md" key={index}>{instruccion}</li>
+  ))}
+              </ul>
+              
+            </section>
+           
             </div>
       </div>
     );

@@ -80,7 +80,7 @@ export const Buttons = ({ id }) => {
         <Main><ButtonContainer>
           <Link href={project.path}><Button>dApp {project.title}</Button></Link>
           <ButtonPopUpInfo id={id}>Info {project.title}</ButtonPopUpInfo>
-          <Link href={project.contractUrl}><Button>Contrato {project.title}</Button></Link>
+          <Link href={project.contractUrl} target="_blank"><Button>Contrato {project.title}</Button></Link>
         </ButtonContainer> </Main> :
         <Desc>Construyendo otras dApps, Descubrirlas Aquí</Desc>
       }</>
