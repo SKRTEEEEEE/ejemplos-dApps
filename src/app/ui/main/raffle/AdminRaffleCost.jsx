@@ -1,13 +1,15 @@
 'use client';
 
 import { RAFFLE_CONTRACT_ADDRESS } from '@/const/addresses';
+import { isntAdmin } from '@/utils/miniParse';
 import { Box, Input, Spinner, Stack, Text } from '@chakra-ui/react';
-import { Web3Button, useContract, useContractRead } from '@thirdweb-dev/react';
+import { Web3Button, useAddress, useContract, useContractRead } from '@thirdweb-dev/react';
 import { ethers } from 'ethers';
 import { useState } from 'react';
 
 export default function AdminRuffleCost() {
   const { contract } = useContract(RAFFLE_CONTRACT_ADDRESS);
+  const address = useAddress();
 
   const { data: entryCost, isLoading: isLoadingCostLoading } = useContractRead(
     contract,
@@ -49,7 +51,7 @@ export default function AdminRuffleCost() {
           ])
         }
         onSuccess={resetTicketPrice}
-        isDisabled={raffleStatus}
+        isDisabled={raffleStatus || isntAdmin(address)}
       >
         Update Ticket Cost
       </Web3Button>

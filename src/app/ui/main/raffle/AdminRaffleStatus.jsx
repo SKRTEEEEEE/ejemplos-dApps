@@ -2,13 +2,15 @@
 
 import { Box, Card, Input, Stack, Text } from '@chakra-ui/react';
 
-import { Web3Button, useContract, useContractRead } from '@thirdweb-dev/react';
+import { Web3Button, useAddress, useContract, useContractRead } from '@thirdweb-dev/react';
 import { useState } from 'react';
 import { RAFFLE_CONTRACT_ADDRESS } from '@/const/addresses';
 import LotteryStatus from './RaffleStatus';
+import { isntAdmin } from '@/utils/miniParse';
 
 export default function AdminLotteryStatusCard() {
   const { contract } = useContract(RAFFLE_CONTRACT_ADDRESS);
+  const address = useAddress();
 
   const { data: raffleStatus } = useContractRead(contract, 'raffleStatus');
 
@@ -52,7 +54,7 @@ export default function AdminLotteryStatusCard() {
             action={(contract) =>
               contract.call('startRaffle', [contractAddress, tokenId])
             }
-            onSuccess={reset}
+            onSuccess={reset} isDisabled={isntAdmin(address)}
           >
             Start Raffle
           </Web3Button>

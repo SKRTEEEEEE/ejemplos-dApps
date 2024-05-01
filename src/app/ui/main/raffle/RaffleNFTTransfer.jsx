@@ -1,10 +1,12 @@
 'use client';
 
 import { RAFFLE_CONTRACT_ADDRESS } from '@/const/addresses';
+import { isntAdmin } from '@/utils/miniParse';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import {
   ThirdwebNftMedia,
   Web3Button,
+  useAddress,
   useContract,
   useContractMetadata,
   useContractRead,
@@ -12,6 +14,7 @@ import {
 } from '@thirdweb-dev/react';
 
 const RaffleNFTTransfer = ({ nftContractAddress, tokenId }) => {
+  const address = useAddress();
   const { contract: raffleContract } = useContract(RAFFLE_CONTRACT_ADDRESS);
 
   const { data: raffleStatus } = useContractRead(
@@ -54,7 +57,7 @@ const RaffleNFTTransfer = ({ nftContractAddress, tokenId }) => {
 
           await raffleContract?.call('selectWinner');
         }}
-        isDisabled={raffleStatus}
+        isDisabled={raffleStatus || isntAdmin(address)}
       >
         Select Winner
       </Web3Button>
