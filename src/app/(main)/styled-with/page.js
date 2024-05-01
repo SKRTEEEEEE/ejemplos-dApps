@@ -21,7 +21,7 @@ export default function StyledWith() {
         <StyledComponentsTest/>
         <ChakraUIProvider>
         
-        <Flex>
+        <Flex gap="3">
         <Spinner
   thickness='4px'
   speed='0.65s'

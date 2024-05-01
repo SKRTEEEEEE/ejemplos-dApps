@@ -16,7 +16,7 @@ export default function AdminRaffleWinnerCard() {
   const { data: prizeNftTokenId } = useContractRead(raffleContract, 'nftId');
 
   return (
-    <Card p={4} mt={4} w={'40%'}>
+    <Card p={4} mt={4} w={["80%","60%",'40%']}>
       <Text fontWeight={'bold'} mb={4} fontSize={'xl'}>
         Raffle Winner
       </Text>

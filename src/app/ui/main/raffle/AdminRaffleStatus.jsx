@@ -21,7 +21,7 @@ export default function AdminLotteryStatusCard() {
   }
 
   return (
-    <Card p={4} mt={4} mr={10} w={'25%'}>
+    <Card p={4} mt={4} mr={10} w={["75%","50%",'25%']}>
       <Text fontWeight={'bold'} mb={4} fontSize={'xl'}>
         Raffle Status
       </Text>
