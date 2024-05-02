@@ -14,7 +14,7 @@ export default function ProtectedRoutesMembership({ children }) {
   const address = useAddress();
   const { contract } = useContract(MEMBERSHIP_NFT_ADDRESS);
   const { data, isLoading, error } = useOwnedNFTs(contract, address);
-  console.log("address: ", address);
+  // console.log("address: ", address);
   const hasDesiredNFT = data?.length > 0;
   
 
