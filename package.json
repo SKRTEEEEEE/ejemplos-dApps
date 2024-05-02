@@ -2,7 +2,11 @@
   "name": "ejemplos-dapps",
   "version": "0.1.0",
   "description": "Ejemplos de dApps",
-  "author": {"email": "adanreh.m@gmail.com", "name": "Adan Reh", "url": "http://skrt-profile.vercel.app"},
+  "author": {
+    "email": "adanreh.m@gmail.com",
+    "name": "Adan Reh",
+    "url": "http://skrt-profile.vercel.app"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,6 +15,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/next-js": "^2.2.0",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
