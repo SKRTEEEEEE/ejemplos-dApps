@@ -41,7 +41,7 @@ export default function Counter() {
               onSuccess={() => alert('Saved!')}
               onError={() => alert('Error!')}
             >
-              Set New Value
+              Guardar
             </Web3Button>
           </>
         )}

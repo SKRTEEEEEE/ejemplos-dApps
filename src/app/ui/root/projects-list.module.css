@@ -1,0 +1,28 @@
+/* Estilos futuristas con colores cyberpunk */
+.projectList {
+    font-weight: bold;
+    padding: 0px 10px;
+    transition: color 0.3;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    letter-spacing: 3px;
+    position: relative;
+    @media only screen and (max-width: 768px) {
+      font-size: 40px;
+    }
+  }
+  
+  .projectList:hover {
+    color: #ffffff; /* Cambia el color al pasar el mouse a blanco */
+    text-shadow: 0 0 10px #ff00aa, 0 0 20px #ff00aa, 0 0 30px #ff00aa; /* Agrega un efecto de sombra */
+  }
+  .projectList:active {
+    text-shadow: 0 0 10px #ff00aa, 0 0 20px #ff00aa, 0 0 30px #ff00aa; /* Agrega un efecto de sombra */
+  }
+
+  
+  
+  

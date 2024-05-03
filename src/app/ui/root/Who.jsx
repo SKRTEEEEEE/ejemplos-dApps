@@ -7,6 +7,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Cube } from '../three-models/Cube';
 import Navbar from '../Navbar';
+import Link from "next/link"
+
 
 
 const Section = styled.div`
@@ -81,7 +83,6 @@ function Who() {
   return (
     <Section>
       <Navbar />
-
       <Container>
         <Left>
           <Canvas camera={{ fov: 25, position: [5, 5, 5] }}>
@@ -92,17 +93,15 @@ function Who() {
           </Canvas>
         </Left>
         <Right>
-          <Title>Think outside the square space</Title>
+          <Title>Ejemplos aplicaciones descentralizadas</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
-            <Subtittle>Who we Are</Subtittle>
+            <Subtittle>Web3</Subtittle>
           </WhatWeDo>
           <Desc>
-            Charitable project focused on replanting and awareness of caring the
-            planet. <br /> Focused on research and dissemination of more
-            effective technological systems.
+            Todas las posibilidades de la blockchain con ejemplos prácticos
           </Desc>
-          <Button>See our works</Button>
+          <Button><Link href={"#projects"}>dApps 👇</Link></Button>
         </Right>
       </Container>
     </Section>

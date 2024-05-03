@@ -1,22 +1,37 @@
-import Link from 'next/link';
-import Cuadrito from "../../ui/Navbar"
-import StyledComponentsTest from '../../ui/main/StyledComponents';
+// import Link from 'next/link';
+import TailwindComponentTest from '@/app/ui/main/styled/TailwindComponent';
+import StyledComponentsTest from '../../ui/main/styled/StyledComponents';
+import {  Flex, Spinner, Text } from '@chakra-ui/react';
+import { ChakraUIProvider } from '@/lib/ChakraUIProvider';
 
 export default function StyledWith() {
   return (
-    <main className="h-screen ">
-      <Cuadrito className="h-1/6" />
-      <div className="flex flex-col justify-center items-center h-5/6 ">
-        Discover our blockchain number store{' '}
+
+     
+      <section className="mt-60 flex flex-col justify-center items-center ">
+        {/* Discover our blockchain number store{' '}
         <Link
           href="/counter"
           className="px-8 border-slate-400 border-2 rounded-md mx-2"
         >
           {' '}
           here
-        </Link>
+        </Link> */}
+        <TailwindComponentTest/>
         <StyledComponentsTest/>
-      </div>
-    </main>
+        <ChakraUIProvider>
+        
+        <Flex gap="3">
+        <Spinner
+  thickness='4px'
+  speed='0.65s'
+  emptyColor='gray.200'
+  color='blue.500'
+  size='md'
+/> <Text fontSize="2xl">Styled with ChakraUI</Text>
+        </Flex></ChakraUIProvider>
+        
+      </section>
+
   );
 }

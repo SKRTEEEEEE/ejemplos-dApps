@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ThirdWebProviderWrapper>
-      <html lang="en">
+      <html lang="es">
 
         <body className={inter.className}>
           {/* <Cuadrito /> 
