@@ -6,6 +6,42 @@
   -webkit-animation: color-change-2x 2s linear infinite alternate both;
   animation: color-change-2x 2s linear infinite alternate both;
 }
+#info-blockchain-pg{
+
+  margin-top: 1700px;
+}
+@media (min-width: 768px) {
+  #info-blockchain-pg{
+
+      margin-top:40px;
+  }
+}
+h2{
+  color: #6bfff7ab;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 2em;
+}
+h3{
+  font-size: 1.5em;
+  font-weight: 600;
+}
+h4{
+  font-size: 1.2em;
+}
+p{
+  margin-top: 0.05em;
+}
+.link{
+  border: black solid 3px;
+  border-radius: 15px;
+  padding: 3px;
+  box-shadow: #6bfff832;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+}
+.link:hover{
+  box-shadow:#6bfff7ab;
+}
 
 /**
  * ----------------------------------------
@@ -28,3 +64,4 @@
     background: #b22cff;
   }
 }
+
