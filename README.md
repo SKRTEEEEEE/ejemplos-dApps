@@ -19,7 +19,8 @@ Aplicaciones desarrolladas principalmente con:
 - **ThirdWeb CLI** para el despliegue de Smart Contracts, _Blockchain_.
 - **Solidity** para la creación de smart contracts, _Blockchain_.
 
-## [Recursos](markdown/recursos.md)
+## [Recursos](https://github.com/SKRTEEEEEE/markdowns)
+## [Contratos desplegados](markdown/contratos_desplegados.md)
 
 ## Contacto
 
@@ -37,9 +38,3 @@ Si encuentras problemas o deseas contribuir al proyecto, por favor, crea un issu
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-#### Not installed dependencies.
-
-    "@chakra-ui/next-js": "^2.2.0",
-    "@chakra-ui/react": "^2.8.2",
-    "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
