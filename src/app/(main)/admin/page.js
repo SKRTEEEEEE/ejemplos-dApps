@@ -22,7 +22,7 @@ import {
     return (
         <ChakraUIProvider>
       <Container maxW={'1440px'} pt={60} mt={[60,0,0]} py={8}>
-        <section className='flex sm:mt-0 mt-48 sm:flex-row flex-col'>
+        <section className='flex sm:mt-0 mt-60 sm:flex-row flex-col'>
             <Box>
         <Heading>Admin Dashboard</Heading>
         <Text>Only admin can make changes</Text></Box>

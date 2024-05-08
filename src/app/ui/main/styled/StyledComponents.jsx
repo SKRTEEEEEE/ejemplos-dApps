@@ -57,7 +57,7 @@ export default function StyledComponentsTest(){
     return (
         <div className="space-y-2">
         <h1 className="text-md sm:text-xl font-medium text-gray-400/80">
-        Styled with Styled Components
+        Styled with Styled Components &
       </h1>
         <Container>
             <Skeleton />
