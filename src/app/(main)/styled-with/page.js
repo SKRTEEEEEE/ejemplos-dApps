@@ -17,7 +17,7 @@ export default function StyledWith() {
           {' '}
           here
         </Link> */}
-        <TailwindComponentTest/>
+        <TailwindComponentTest />
         <StyledComponentsTest/>
         <ChakraUIProvider>
         

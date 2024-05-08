@@ -63,7 +63,7 @@ const Popup = ({ id, onClose }) => {
   
     return (
       <div>
-        <div  className="border-4 rounded-md border-secondary/20 hover:bg-white/20 hover:border-secondary/40 p-4" onClick={openPopup}>{children}</div>
+        <div  className="border-4 rounded-md text-sm xl:text-2xl border-secondary/20 hover:bg-white/20 hover:border-secondary/40 p-4" onClick={openPopup}>{children}</div>
         {isPopupOpen && <Popup id={id} onClose={closePopup} />}
       </div>
     );

@@ -6,6 +6,9 @@
   -webkit-animation: color-change-2x 2s linear infinite alternate both;
   animation: color-change-2x 2s linear infinite alternate both;
 }
+#styled-with{
+  margin-top: 1400px;
+}
 #info-blockchain-pg{
 
   margin-top: 1700px;
@@ -14,6 +17,9 @@
   #info-blockchain-pg{
 
       margin-top:40px;
+  }
+  #styled-with{
+    margin-top: 4px;
   }
 }
 h2{
