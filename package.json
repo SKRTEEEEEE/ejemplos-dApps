@@ -26,6 +26,8 @@
     "@thirdweb-dev/sdk": "^4.0.33",
     "ethers": "^5.7.2",
     "framer-motion": "^11.0.25",
+    "mongodb": "^6.6.1",
+    "mongoose": "^8.3.4",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
